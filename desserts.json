@@ -1,0 +1,97 @@
+[
+    {
+        "name": "ICE LATTE",
+        "price": 2.80,
+        "imageClass": "bg-cake"
+    },
+    {
+        "name": "Cheesecake",
+        "price": 4.69,
+        "imageClass": "bg-cheesecake"
+    },
+    {
+        "name": "Croissant",
+        "price": 2.20,
+        "imageClass": "bg-croissant"
+    },
+    {
+        "name": "Cappuccino",
+        "price": 2.79,
+        "imageClass": "bg-cappuccino"
+    },
+    {
+        "name": "Cookies",
+        "price": 1.90,
+        "imageClass": "bg-cookies"
+    },
+    {
+        "name": "Green Apple",
+        "price": 1.20,
+        "imageClass": "bg-apple"
+    },
+    {
+        "name": "Strawberry dessert",
+        "price": 3.10,
+        "imageClass": "bg-strawberry"
+    },
+    {
+        "name": "Chocolate Éclair Dessert",
+        "price": 3.99,
+        "imageClass": "bg-eclair"
+    },
+    {
+        "name": "Chocolate truffle dessert",
+        "price": 4.20,
+        "imageClass": "bg-truffle"
+    },
+    {
+        "name": "Fancy Cake",
+        "price": 4.69,
+        "imageClass": "bg-fancy"
+    },
+    {
+        "name": "Strawberry Ladyfinger",
+        "price": 3.60,
+        "imageClass": "bg-strawberry"
+    },
+    {
+        "name": "Fruit Salad",
+        "price": 2.90,
+        "imageClass": "bg-fruit-salad"
+    },
+    {
+        "name": "Ice Cream Sandwich",
+        "price": 3.50,
+        "imageClass": "bg-icecream"
+    },
+    {
+        "name": "Cake with Strawberry",
+        "price": 4.10,
+        "imageClass": "bg-cheesecake"
+    },
+    {
+        "name": "Fancy Cake (Berry)",
+        "price": 4.89,
+        "imageClass": "bg-strawberry"
+    },
+    {
+        "name": "Latte",
+        "price": 2.79,
+        "imageClass": "tile-plain"
+    },
+    {
+        "name": "Sweets",
+        "price": 1.00,
+        "imageClass": "tile-plain pink"
+    },
+    {
+        "name": "Juice",
+        "price": 1.90,
+        "imageClass": "tile-plain yellow"
+    },
+    {
+        "name": "Fruit yoghurt",
+        "price": 18.00,
+        "imageClass": "tile-plain"
+    }
+]

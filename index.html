@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POS UI – Desserts (Interactive + Excel Export)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <header class="appbar">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg></span>
+        <div class="title">One Shots</div>
+        <div class="spacer"></div>
+        <span class="icon" title="Search" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path
+                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79L20 21.5 21.5 20 15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg></span>
+        <span class="icon" title="Notifications" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V9a6 6 0 10-12 0v7l-2 2v1h16v-1l-2-2z" />
+            </svg></span>
+    </header>
+
+    <main class="content">
+        <section class="catalog" aria-label="Catalog grid">
+            <div class="grid" id="catalog">
+            </div>
+        </section>
+
+        <aside class="ticket" aria-label="Ticket">
+            <div class="ticket-header">
+                <h2>Ticket</h2>
+            </div>
+            <div class="ticket-body">
+                <div class="select">
+                    <svg class="icon" viewBox="0 0 24 24" style="color:#64748b">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                    <select id="serviceMode" aria-label="Service mode">
+                        <option value="dinein" selected>Dine in</option>
+                        <option value="takeaway">Take away</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+                <ul class="lines" id="lines"></ul>
+                <div class="row total"><span>Total</span><span id="total"></span></div>
+                <div class="summary">
+                </div>
+            </div>
+            <div class="ticket-actions">
+                <button class="btn save" id="saveBtn">SAVE</button>
+                <button class="btn export" id="exportBtn">PRINT</button>
+                <button class="btn charge" id="chargeBtn">CLEAR</button>
+            </div>
+        </aside>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
