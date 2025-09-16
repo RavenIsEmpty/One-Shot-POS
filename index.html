@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>POS UI – Desserts (Interactive + Excel Export)</title>
+    <title>One Shots Cafe</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +36,7 @@
         <aside class="ticket" aria-label="Ticket">
             <div class="ticket-header">
                 <h2>Ticket</h2>
+
             </div>
             <div class="ticket-body">
                 <div class="select">
@@ -46,6 +49,7 @@
                         <option value="delivery">Delivery</option>
                     </select>
                 </div>
+                <div class="row date" id="ticketDate"></div> <!-- Added date display -->
                 <ul class="lines" id="lines"></ul>
                 <div class="row total"><span>Total</span><span id="total"></span></div>
                 <div class="summary">
@@ -53,11 +57,20 @@
             </div>
             <div class="ticket-actions">
                 <button class="btn save" id="saveBtn">SAVE</button>
-                <button class="btn export" id="exportBtn">PRINT</button>
+                <button class="btn export" id="exportBtn">EXPORT</button>
                 <button class="btn charge" id="chargeBtn">CLEAR</button>
             </div>
         </aside>
     </main>
+
+    <!-- Hidden receipt container -->
+    <div id="receipt" style="display: none; padding: 20px; font-family: Arial, sans-serif;">
+        <h2>Receipt</h2>
+        <p>Date: <span id="receiptDate"></span></p>
+        <ul id="receiptItems"></ul>
+        <p>Total: <span id="receiptTotal">$0.00</span></p>
+    </div>
+
     <script src="app.js"></script>
 </body>
 

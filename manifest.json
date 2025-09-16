@@ -1,5 +1,32 @@
 [
-  null,
-  null,
-  null
+  {
+    "name": "Cake",
+    "timestamp": "2025-09-15T10:05:00.000Z",
+    "quantity": 2
+  },
+  {
+    "name": "Cookies",
+    "timestamp": "2025-09-16T02:08:37.064Z",
+    "quantity": 5
+  },
+  {
+    "name": "Cookies",
+    "timestamp": "2025-09-16T02:08:56.076Z",
+    "quantity": 5
+  },
+  {
+    "name": "Chocolate Éclair Dessert",
+    "timestamp": "2025-09-16T02:08:56.076Z",
+    "quantity": 8
+  },
+  {
+    "name": "Strawberry Ladyfinger",
+    "timestamp": "2025-09-16T02:08:56.076Z",
+    "quantity": 4
+  },
+  {
+    "name": "Cake with Strawberry",
+    "timestamp": "2025-09-16T02:50:06.247Z",
+    "quantity": 4
+  }
 ]

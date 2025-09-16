@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
       body: JSON.stringify(ticketData),
     })
       .then((response) => {
+        console.log("Fetch response status:", response.status); // Debug response status
         if (!response.ok)
           throw new Error(`Server error: ${response.statusText}`);
         return response.json();
