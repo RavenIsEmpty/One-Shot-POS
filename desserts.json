@@ -60,6 +60,11 @@
         "imageClass": "bg-strawberry"
     },
     {
+        "name": "Strawberry Ladyfinger",
+        "price": 3.60,
+        "imageClass": "bg-strawberry"
+    },
+    {
         "name": "Fruit Salad",
         "price": 2.90,
         "imageClass": "bg-fruit-salad"
