@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="inventory.css" />
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <header class="appbar">
+        <span class="icon" aria-hidden="true" onclick="window.location.href='index.html'"><svg viewBox="0 0 24 24">
+                <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg></span>
+        <div class="title">Inventory Dashboard</div>
+    </header>
+
+    <main class="content">
+        <section class="inventory" aria-label="Inventory management">
+            <div class="grid" id="inventoryGrid"></div>
+        </section>
+    </main>
+
+    <script>
+        let inventoryItems = [];
+
+        // Load fixed inventory data from inventory.json with image classes
+        fetch('inventory.json')
+            .then(response => {
+                if (!response.ok) throw new Error(`Failed to load inventory.json at 04:24 PM +07 2025-09-16: ${response.statusText}`);
+                return response.json();
+            })
+            .then(data => {
+                inventoryItems = data.map(item => ({
+                    ...item,
+                    quantity: item.quantity || 0,
+                    imageClass: item.imageClass || 'coffee' // Default image class if not specified
+                }));
+                console.log('Loaded inventory at 04:24 PM +07 2025-09-16:', inventoryItems);
+                updateInventory();
+            })
+            .catch(error => {
+                console.error('Error loading inventory at 04:24 PM +07 2025-09-16:', error);
+                document.getElementById('inventoryGrid').innerHTML = '<p style="color: red;">Error loading inventory. Check console for details.</p>';
+            });
+
+        function updateInventory() {
+            const inventoryGrid = document.getElementById('inventoryGrid');
+            inventoryGrid.innerHTML = '';
+            inventoryItems.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = `card ${item.imageClass}`;
+                card.dataset.index = index;
+                card.innerHTML = `
+                    <img src="https://via.placeholder.com/100?text=${encodeURIComponent(item.name)}" alt="${item.name}" style="width: 100%; height: auto; border-radius: 4px;">
+                    <div class="label">${item.name}</div>
+                    <div class="qty-controls">
+                        <button onclick="adjustQuantity(${index}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="adjustQuantity(${index}, 1)">+</button>
+                    </div>
+                `;
+                inventoryGrid.appendChild(card);
+            });
+            localStorage.setItem('inventory', JSON.stringify(inventoryItems)); // Persist changes
+        }
+
+        function adjustQuantity(index, change) {
+            if (inventoryItems[index].quantity + change >= 0) {
+                inventoryItems[index].quantity += change;
+                updateInventory();
+            } else {
+                inventoryItems.splice(index, 1); // Remove item if quantity reaches 0
+                updateInventory();
+            }
+        }
+    </script>
+</body>
+
+</html>

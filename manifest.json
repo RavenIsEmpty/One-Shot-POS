@@ -28,5 +28,35 @@
     "name": "Cake with Strawberry",
     "timestamp": "2025-09-16T02:50:06.247Z",
     "quantity": 4
+  },
+  {
+    "name": "Strawberry dessert",
+    "timestamp": "2025-09-16T06:29:02.043Z",
+    "quantity": 1
+  },
+  {
+    "name": "Cake with Strawberry",
+    "timestamp": "2025-09-16T06:29:02.043Z",
+    "quantity": 1
+  },
+  {
+    "name": "Ice Cream Sandwich",
+    "timestamp": "2025-09-16T06:29:02.043Z",
+    "quantity": 1
+  },
+  {
+    "name": "Ice Cream Sandwich",
+    "timestamp": "2025-09-16T06:33:49.272Z",
+    "quantity": 1
+  },
+  {
+    "name": "Fruit Salad",
+    "timestamp": "2025-09-16T06:33:49.272Z",
+    "quantity": 1
+  },
+  {
+    "name": "Cake with Strawberry",
+    "timestamp": "2025-09-16T06:33:49.272Z",
+    "quantity": 1
   }
 ]

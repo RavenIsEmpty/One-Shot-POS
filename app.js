@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveBtn = document.getElementById("saveBtn");
   const exportBtn = document.getElementById("exportBtn");
   const chargeBtn = document.getElementById("chargeBtn");
-  const serviceMode = document.getElementById("serviceMode");
+
 
   let ticketItems = [];
 
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     !totalDisplay ||
     !saveBtn ||
     !exportBtn ||
-    !chargeBtn ||
-    !serviceMode
+    !chargeBtn 
+    
   ) {
     console.error("One or more DOM elements not found:", {
       catalog,
@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       totalDisplay,
       saveBtn,
       exportBtn,
-      chargeBtn,
-      serviceMode,
+      chargeBtn
     });
     return;
   }

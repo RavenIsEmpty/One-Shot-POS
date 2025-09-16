@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Coffee",
+        "quantity": 50,
+        "imageClass": "coffee"
+    },
+    {
+        "name": "Tea",
+        "quantity": 30,
+        "imageClass": "tea"
+    },
+    {
+        "name": "Cake",
+        "quantity": 20,
+        "imageClass": "cake"
+    }
+]

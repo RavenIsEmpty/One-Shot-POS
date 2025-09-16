@@ -1,0 +1,122 @@
+/* Existing styles remain unchanged for POS */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.appbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #312f2f;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.appbar .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.appbar .icon svg {
+    fill: #ffffff;
+}
+
+.appbar .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.appbar .spacer {
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+
+
+.inventory {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f6f8;
+}
+
+.inventory-controls {
+    display: none;
+}
+
+.inventory .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.inventory .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.inventory .card:hover {
+    transform: scale(1.05);
+}
+
+.inventory .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.inventory .card .label {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.inventory .card .qty-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.inventory .card .qty-controls button {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    background: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.inventory .card .qty-controls span {
+    margin: 0 10px;
+}
+
+/* Specific image class styles */
+.inventory .coffee {
+    background-color: #d1e7dd;
+}
+
+.inventory .tea {
+    background-color: #e7f0d1;
+}
+
+.inventory .cake {
+    background-color: #f8d7da;
+}
+
+

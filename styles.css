@@ -1,5 +1,5 @@
 :root {
-  --green: #43a047;
+  --green: #494949;
   --bg: #f5f6f8;
   --text: #0f172a;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 6px 24px rgba(0, 0, 0, 0.06);
@@ -22,7 +22,7 @@ body {
 .appbar {
   height: 58px;
   background: var(--green);
-  color: #fff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   padding: 0 16px;
@@ -329,12 +329,19 @@ body {
 }
 
 .row.date {
-    font-size: 12px;
-    color: #64748b;
-    margin-bottom: 10px;
-    padding: 5px 0;
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 10px;
+  padding: 5px 0;
 }
-
+.btn.inventory-btn {
+  max-width: 100px;
+  background-color: #f59e0b;
+  color: white;
+  padding: 8px 0;
+  border-radius: 4px;
+  margin-left: 10px;
+}
 .ticket-actions {
   display: flex;
   gap: 10px;
@@ -379,29 +386,53 @@ body {
     order: -1;
   }
 }
+
+.btn.inventory-btn {
+  background-color: #f59e0b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.btn.add {
+  background-color: #10b981;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn.remove {
+  background-color: #ef4444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
 /* Receipt styling */
 #receipt {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #receipt h2 {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 #receipt p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 #receipt ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 #receipt li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
